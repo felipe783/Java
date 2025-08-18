@@ -21,7 +21,7 @@ public class Main {
             for (i = 0; i < num_notas; i++) {
                 System.out.printf("Fale as nota %dº:\n", i + 1);
                 nota[i] = input.nextFloat();
-                if (tipo != 2) {
+                if (tipo != 1) {
                     System.out.println("Fale o peso:\n");
                     pesos[i] = input.nextFloat();
                 }
