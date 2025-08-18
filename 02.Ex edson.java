@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in); //Criar o scanner pra ler
+        Scanner input = new Scanner(System.in); //Criar o scanner pra ler,e ele le float com virgua(7,5)
         int num_alunos, i, tipo, num_notas, aluno;
-        float Soma_Notas, Soma_Pesos,soma_NP,mediaP,media; 
+        float Soma_Notas, Soma_Pesos,soma_NP,mediaP,media;
         System.out.println("Quantos Alunos:");
         num_alunos = input.nextInt();
         input.nextLine();
@@ -20,12 +20,10 @@ public class Main {
             input.nextLine();
             for (i = 0; i < num_notas; i++) {
                 System.out.printf("Fale as nota %dº:\n", i + 1);
-                input.nextFloat();
-                input.nextLine();
-                if (tipo == 2) {
+                nota[i] = input.nextFloat();
+                if (tipo != 2) {
                     System.out.println("Fale o peso:\n");
                     pesos[i] = input.nextFloat();
-                    input.nextLine();
                 }
             }
             //Media
