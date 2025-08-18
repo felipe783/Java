@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in); //Criar o scanner pra ler,e ele le float com virgua(7,5)
+        Scanner input = new Scanner(System.in); //Criar o scanner pra ler,e ele le float com virgula Ex:7,5
         int num_alunos, i, tipo, num_notas, aluno;
         float Soma_Notas, Soma_Pesos,soma_NP,mediaP,media;
         System.out.println("Quantos Alunos:");
