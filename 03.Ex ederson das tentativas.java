@@ -13,11 +13,11 @@ public class Main {
             String senha = scanner.nextLine();
             //3 tentativas
             if (senha.equals(senhacerta) && usuario.equals(usuariocerto)){ //esse equals pra objetos (String, List, etc). é o ==
-                System.out.println("Senha correta!");
+                System.out.println("Senha correta");
                 break;
             }
             else{
-                System.out.println("Senha incorreta!");
+                System.out.println("Senha incorreta ou usuario incorreto");
             }
         }
         if(i<3){
