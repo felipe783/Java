@@ -6,7 +6,7 @@ public class Main{
         int n1,num,aux;
         for(aux=0;aux<=10;aux++){
             for(num=0;num<=10;num++){
-                System.out.printf("\n%d * %d = %d",aux,num,(aux*num));
+                System.out.printf("\n%d * %d = %d",aux,num,(aux*num)); //o %d é o %i so q no java(nao sei pq o %i não funciona)
             }
         }
     }
