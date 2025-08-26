@@ -11,18 +11,19 @@ public class Main{
             System.out.println("Fale o segundo intervalo:");
             intervalo2 = input.nextInt();
             input.nextLine();
-            if(intervalo1<=0 || intervalo2<=0){ //aqui vai voltar pq nãop entrou no else
+            if(intervalo1>intervalo2){ //aqui troca os intervalos pra o intervalo1 ser menor q o 2
+                int aux=intervalo1;
+                intervalo1=intervalo2;
+                intervalo2=aux;
+            }
+            if(intervalo1<0){ //aqui vai voltar pq nãop entrou no else
                 System.out.println("Bota um numero maior q zero");
             }
             else{
                 break; //aqui sai
             }
         }
-        if(intervalo1>intervalo2){ //aqui troca os intervalos pra o intervalo1 ser menor q o 2
-            int aux=intervalo1;
-            intervalo1=intervalo2;
-            intervalo2=aux;
-        }
+
         //Primos
         for(int i=intervalo1;i<intervalo2;i++){
             boolean primo=true;
