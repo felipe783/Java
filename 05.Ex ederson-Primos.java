@@ -17,10 +17,10 @@ public class Main{
 
         for(int i=intervalo1;i<intervalo2;i++){
             boolean primo=true;
-            for(int contador=2;contador<i;contador++){
+            for(int contador=2;contador<i;contador++){ //menor q i pq no if vai entrar como i%i e isso sempre da 0 e vai sair
                 if(i % contador==0){ //Ver se tem mais de 1 divisor
                     primo=false;
-                    break;
+                    break; //sai do loop pra encontrou mais de 1 divisor 
                 }
             }
             if(primo){
