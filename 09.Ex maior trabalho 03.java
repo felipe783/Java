@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+/*Faça um programa que monte uma matriz 2x4 com números inteiros, calcule e
+mostre. A quantidade de elementos entre 10 e 15 em cada linha. A média dos
+elementos pares da matriz.*/
+
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
