@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/*Faça um algoritmo que monte uma matriz com as dimensões do usuário,
+calcule e mostre a soma dos elementos da diagonal secundária.*/
+
 public class Main{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
