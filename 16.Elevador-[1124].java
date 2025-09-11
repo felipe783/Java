@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
+//O if ta dando errado 
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -36,16 +37,21 @@ public class Main {
             AreaCirc.add(aux2);
             AreaRet.add(C.get(i)*L.get(i)); //Aqui faz direto o calculo em vez de usar outra variavel
         }
-        //Sa porra de if ta errado
+        float diametro=0;
+        float maiorRaio=0;
         for(i=0;i<AreaRet.size();i++){
-            float diametro=R1.get(i)*2+R2.get(i)*2;
-            float maiorRaio=Math.max(R1.get(i),R2.get(i));
-            if ((diametro <= C.get(i) && maiorRaio*2 <= L.get(i)) || (diametro <= L.get(i) && maiorRaio*2 <= C.get(i))) {
+            diametro=(R1.get(i)*2)+(R2.get(i)*2);
+            maiorRaio=Math.max(R1.get(i),R2.get(i));
+            //Ver se cabe ou não
+                //Horizontal                                  //Vertical
+            if((maiorRaio<L.get(i) && diametro<C.get(i)) || (maiorRaio<C.get(i)&& diametro<L.get(i))  ){
                 System.out.println("N");
             }
             else{
                 System.out.println("S");
             }
+            maiorRaio=0;
+            diametro=0;
         }
     }
 }
