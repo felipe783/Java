@@ -37,7 +37,7 @@ public class Main{
                 if (unidade[1] == 1) {//Celsius
                     valor = (valor - 32) / 1.8;
                 } else {//Kelvin
-                    valor = (valor - 32) * (5 / 9) + 273;
+                    valor = (valor - 32) * (5.0/9.0) + 273; //Se so for 5/9 sempre vai dar 0 pq é divsão de inteiro
                 }
                 break;
             case 3: //kelvin
@@ -50,4 +50,4 @@ public class Main{
         }
         System.out.printf("\nO valor convertido %.2f", valor);
     }
-    }
+}
