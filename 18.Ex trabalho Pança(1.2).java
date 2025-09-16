@@ -4,7 +4,10 @@ import java.util.Scanner;
 usuário informa a unidade de origem, o valor e a unidade de destino. Use variáveis primitivas e constantes para fórmulas.
 Extensão: Integre em uma aplicação de monitoramento ambiental para sensores IoT.*/
 
-public class Main {
+/*A logica foi o seguinte,se ele veio da origem então logicamente vc pode descartar aquela conversão,e fazer as outras duas,dai pra ver pra 
+qual ele qer converter é so colocar 1 if e um else(pq se não foi 1 é outro)em cada caso,e fazer as formulas pra cada um*/  
+
+public class Main{
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int[] unidade = new int[2]; //Cria o vetor unidade
@@ -47,4 +50,4 @@ public class Main {
         }
         System.out.printf("\nO valor convertido %.2f", valor);
     }
-}
+    }
