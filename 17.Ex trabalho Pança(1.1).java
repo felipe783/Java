@@ -20,11 +20,11 @@ public class Main{
             System.out.println("Baixo peso");
         }
         else{
-            if(imc>=18.5 || imc<24.99){
+            if(imc>=18.5 && imc<24.99){
                 System.out.println("Normal");
             }
             else{
-                if(imc>25 || imc<29.99){
+                if(imc>25 && imc<29.99){
                     System.out.println("Sobrepeso");
                 }
                 else{
