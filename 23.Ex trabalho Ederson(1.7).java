@@ -9,7 +9,7 @@
             Scanner input=new Scanner(System.in);
             boolean aux=true;
             float valor;
-            System.out.println("Se quiser digite  parar 800");
+            System.out.println("Se quiser digite  parar 0");
             while(aux){
                 System.out.printf("\nFale a compra:");
                 valor = input.nextFloat();
