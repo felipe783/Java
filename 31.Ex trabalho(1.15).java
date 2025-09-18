@@ -9,19 +9,19 @@ public class Main{
     public static void main(String[] args){
         Scanner input=new Scanner(System.in);
         Random rnd=new Random(); //Aqui cria um objeto de randomização
-        boolean aux=false;
+        boolean aux=true;
         int tentativas=0;
-        /*Normalmente iria de 0 a 5 mas o +1 desloca tudo "pra direita" então vai 1 a 6(os dois inclusos)*/
         do{
             //Dois "dados"
+            /*Normalmente iria de 0 a 5 mas o +1 desloca tudo "pra direita" então vai 1 a 6(os dois inclusos)*/
             int x=rnd.nextInt(6)+1;
             int y=rnd.nextInt(6)+1;
             tentativas++;
-            if(x%2==0 || y%2==0){ //vai pular se x/y for par
+            if(x%2==0 && y%2==0){ //vai pular se x/y for par
                 continue;
             }
             if(x+y==7){
-                aux=true;
+                aux=false;
                 break;
             }
         }while(aux);
