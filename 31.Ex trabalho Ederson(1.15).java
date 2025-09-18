@@ -9,7 +9,7 @@ public class Main{
     public static void main(String[] args){
         Scanner input=new Scanner(System.in);
         boolean aux=true;
-        int i=0;
+        int i=0,primeiro=0,segundo=0;
         ArrayList<String> Votos=new ArrayList<>();
         String fim;
         System.out.println("==========================");
@@ -23,9 +23,19 @@ public class Main{
                 System.out.println("Digite o numero certo");
             }
             else{
-                if(Votos.get(i).equalsIgnoreCase("fim")){
-                    aux=false;
-                    break;
+                if(Votos.get(i).equalsIgnoreCase("178")){
+                    primeiro++;    
+                }
+                else{
+                    if(Votos.get(i).equalsIgnoreCase("777")){
+                        segundo++;
+                    }
+                    else{
+                        if(Votos.get(i).equalsIgnoreCase("fim")){
+                            aux=false;
+                            break;
+                        }
+                    }
                 }
             }
             i++;
