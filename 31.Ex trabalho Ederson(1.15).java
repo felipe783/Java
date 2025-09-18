@@ -19,9 +19,14 @@ public class Main{
         while(aux){
             System.out.println("Fale o numero do seu candidato:");
             Votos.add(input.nextLine());
-            if(Votos.get(i).equalsIgnoreCase("fim")){
-                aux=false;
-                break;
+            if(!Votos.get(i).equalsIgnoreCase("178") || !Votos.get(i).equalsIgnoreCase("777")){
+                System.out.println("Digite o numero certo");
+            }
+            else{
+                if(Votos.get(i).equalsIgnoreCase("fim")){
+                    aux=false;
+                    break;
+                }
             }
             i++;
         }
