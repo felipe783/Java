@@ -18,9 +18,11 @@ public class Main{
         System.out.println("==========================");
         while(aux){
             System.out.println("Fale o numero do seu candidato:");
-            Votos.add(input.nextLine());
+            Votos.add(input.nextLine());//adiciona o input no vetor
+            /*Esse if verifica se ele digitou certo,ou se quer acabar*/
+            //Se for diferente dos 178/777 entra nesse if
             if(!Votos.get(i).equalsIgnoreCase("178") && !Votos.get(i).equalsIgnoreCase("777")){
-                if(Votos.get(i).equalsIgnoreCase("fim")){
+                if(Votos.get(i).equalsIgnoreCase("fim")){ //Se digitou fim sai do while
                     aux=false;
                     break;
                 }
