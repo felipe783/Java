@@ -20,25 +20,27 @@ public class Main{
             System.out.println("Fale o numero do seu candidato:");
             Votos.add(input.nextLine());
             if(!Votos.get(i).equalsIgnoreCase("178") && !Votos.get(i).equalsIgnoreCase("777")){
-                System.out.println("Digite o numero certo");
+                if(Votos.get(i).equalsIgnoreCase("fim")){
+                    aux=false;
+                    break;
+                }
+                else{
+                    System.out.println("Digite o numero certo");
+                }
             }
             else{
                 if(Votos.get(i).equalsIgnoreCase("178")){
-                    primeiro++;    
+                    primeiro++;
                 }
                 else{
                     if(Votos.get(i).equalsIgnoreCase("777")){
                         segundo++;
                     }
-                    else{
-                        if(Votos.get(i).equalsIgnoreCase("fim")){
-                            aux=false;
-                            break;
-                        }
-                    }
                 }
             }
             i++;
         }
+        System.out.printf("\nQuantidade de votos para o primeiro candidato:%d",primeiro);
+        System.out.printf("\nQuantidade de votos para o segundo candidato:%d",segundo);
     }
 }
