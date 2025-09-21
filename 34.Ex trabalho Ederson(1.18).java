@@ -7,6 +7,7 @@ com escopo controlado. Extensão: Integre em sistemas de cadastro governamental 
 
 public class Main {
     //o int[] fala q é um vetor pro programa
+    /**Muda o cpf de string pra numero**/
     public static int[] transformar(String cpf) {
         int[] cpf_int = new int[12];
         int i;
@@ -19,12 +20,12 @@ public class Main {
         return cpf_int;
         //Ele devolve o objeto "cpf_int" com os valores preenchidos em cada posição
     }
+    /**Valida o cpf**/
     public static boolean validar(String cpf){
         int[] cpf_int = transformar(cpf); /*chama a função transformar*/
         char primeiro;
         boolean aux=true;
         int i,cont=0,j=10,multiplicação=0,soma=0,verificador_01=0,verificador_02=0;
-        primeiro = cpf.charAt(0);
         /**Validar tamanho,e cpf com os mesmos numero**/
         if(cpf.length() != 11){
             return false;
