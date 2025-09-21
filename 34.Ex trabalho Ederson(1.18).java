@@ -8,6 +8,10 @@ com escopo controlado. Extensão: Integre em sistemas de cadastro governamental 
 public class Main {
     //o int[] fala q é um vetor pro programa
     /**Muda o cpf de string pra numero**/
+    /*Minha logica pra essa função:como o input do Cpf é string e ele não iria mudar,então eu coloquei em um vetor cada numero
+    separado,e pq fiz isso?
+    se eu ler o Cpf como long/double e este cpf começar com 0 ele vai ignorar o 0,e pra arrumar achei
+    muito complexo,e prefiri usar essa minha ideia do vetor*/
     public static int[] transformar(String cpf) {
         int[] cpf_int = new int[12];
         int i;
@@ -31,24 +35,29 @@ public class Main {
             return false;
         }
         primeiro = cpf.charAt(0);
-        /*Preencher o vetor e ver se todos os numeros são iguais*/
+        /*Se todos os valores são iguais então basta pegar apenas 1 numero do cpf e verificar todos com ele*/
+        /**Preencher o vetor e ver se todos os numeros são iguais**/
         for(i=0;i<11;i++){
             if(cpf.charAt(i)==primeiro){
                 cont++;
             }
         }
-        if(cont==11){
+        if(cont==11){ //Se o cont foi usado 11 todos os numero são iguais
             return false;
         }
         /**Validar os digitos**/
-        //Primeiro digito verificador
+        /*Pra calcular os digitos verificadores,são pegos os 9 primeiros numeros(para o 1º dígito) e os 10 primeiros (para o 2º dígito)
+        e multiplica eles pelos pessos decrescentes o primeiro de 10-2 e o segundo de 11-2,dai ver o resto da soma da multiplicação
+        se der 0/1 o validador=0 se não o validador=11-resto da soma*/
+        //Ta em um while pq acho q daria conflito com os 2 ultimos if
         while(aux){
+            /**Primeiro digito verificador**/
             for(i=0;i<9;i++){
-                multiplicação=cpf_int[i]*j;
-                j--;
-                soma+=multiplicação;
+                multiplicação=cpf_int[i]*j; //Aqui é a multiplicação
+                j--; //o j decrescer pq diz na regra pra multiplicar com pesos decrescentes
+                soma+=multiplicação; //a soma
             }
-            if(soma%11==0 || soma%11==1){
+            if(soma%11==0 || soma%11==1){ //ver os restos
                 verificador_01=0;
             }
             else{
@@ -57,6 +66,7 @@ public class Main {
             //Segundo digito verificador
             soma=0;
             multiplicação=0;
+            /**Segundo**/
             j=11;
             for(i=0;i<10;i++){
                 multiplicação=cpf_int[i]*j;
