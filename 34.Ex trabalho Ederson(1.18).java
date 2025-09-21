@@ -2,6 +2,9 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Random;
 
+/*Validador de CPF: Desenvolva uma função que verifique validade de CPF (algoritmo padrão), retornando boolean. Chame
+com escopo controlado. Extensão: Integre em sistemas de cadastro governamental ou e-commerce.*/
+
 public class Main {
     //o int[] fala q é um vetor pro programa
     public static int[] transformar(String cpf) {
