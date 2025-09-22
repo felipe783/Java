@@ -63,7 +63,6 @@ public class Main {
        }
        System.out.printf("\nA quantidade de produtos:%d",soma);
        System.out.printf("\nA menor quantidade de produtos:%d",menor);
-       System.out.print("======================================================\n");
+       System.out.print("\n======================================================\n");
    }
 }
-
