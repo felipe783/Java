@@ -13,7 +13,7 @@ public class Main {
     se eu ler o Cpf como long/double e este cpf começar com 0 ele vai ignorar o 0,e pra arrumar achei
     muito complexo,e prefiri usar essa minha ideia do vetor*/
     public static int[] transformar(String cpf) {
-        int[] cpf_int = new int[12];
+        int[] cpf_int = new int[11];
         int i;
         /**transforma o cpf em numero**/
         for (i = 0; i < 11; i++) {
@@ -68,7 +68,10 @@ public class Main {
             multiplicação=0;
             /**Segundo**/
             j=11;
-            for(i=0;i<10;i++){
+            for(i=0;i<9;i++){
+                if(j==2){ //Esse if é pra sair do loop pra pegar o validador_01 e incluir no calculo(vem da formula do cpf)
+                    break;
+                }
                 multiplicação=cpf_int[i]*j;
                 j--;
                 soma+=multiplicação;
