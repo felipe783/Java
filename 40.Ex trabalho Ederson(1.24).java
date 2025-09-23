@@ -22,13 +22,13 @@ public class Main{
         }
         media = soma/dias;
         soma=0;
-        for(i=0;i<dias;i++){ //Ver a diferença por dia
-            dif_temps[i] = media-temperatura[i];
-            dif_temps[i] = Math.pow(dif_temps[i],2);
-            soma_variancia += soma +dif_temps[i];
+        for(i=0;i<dias;i++){  //Tudo isso é da formula de "Desvio padrão de temperatura"
+            dif_temps[i] = media-temperatura[i]; //Ver a diferença por dia
+            dif_temps[i] = Math.pow(dif_temps[i],2); //Eleva oo quadrado
+            soma_variancia += soma +dif_temps[i]; //Soma os numeros elevados ao quadrado
         }
-        variancia = soma_variancia/dias;
-        variancia = Math.sqrt(variancia);
+        variancia = soma_variancia/dias; //Media do desvio padrão
+        variancia = Math.sqrt(variancia); //Tira a raiz
         System.out.printf("\nA temperatura media:%.2f",media);
         System.out.printf("\nO desvio pedrão:%.2f",variancia);
     }
