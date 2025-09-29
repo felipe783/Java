@@ -14,8 +14,10 @@ public class Main {
     public static float cambio(float valor, int veio_daqui, int vai_praca){
         /*A logica daqui é o seguinte,temos o valor de origem[veio_daqui],e pra onde ele vai[vai_praca]
         e como as taxas estão em um vetor então o origem pega o numero na posição */
-        valor_convertido= valor * taxas[veio_daqui];
+        /**Converte o valor pra moeda de onde veio**/
+        valor_convertido= valor * taxas[veio_daqui]; 
         /*Aqui ele faz a conversão de reais pra euro/dolar*/
+        /**Converte o valor pra onde ele vai**/
         return valor_convertido/ taxas[vai_praca];
         /*Aqui se voce sabe quantos voce tem em reais so basta converter pra moeda deseja*/
     }
