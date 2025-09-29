@@ -16,7 +16,7 @@ public class Main{
         senha = input.nextLine();
         char letras;
         if(senha.length()>=8){ //Ve o tamanho ta string
-            for(i=0;i<senha.length();i++){
+            for(i=0;i<senha.length();i++){ //Alfabeto
                 letras=senha.charAt(i);
                 for(j=0;j<alfabeto.length;j++){ //aqui ve as letras
                     if(letras==alfabeto[j]){
